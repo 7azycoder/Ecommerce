@@ -63,3 +63,15 @@ create homepage using app.get method
 add 'morgan' logging request library in server.js
 after it install morgan from terminal using command
 npm install morgan --save
+
+create a new folder models. It will contain schemas for our databases
+create new file in this folder named 'user.js'
+in this file create schema named 'UserSchema'
+at last of this file write export command
+then install mongooose and bcrypt-nodejs from terminal using the following command
+npm install mongoose bcrypt-nodejs --save
+
+got to server.js file and import mongoose library there and connect to database by using mongoose.connect function
+now go to site mongolab.com and login to your account. Click on 'create new' button ,select amazon web services, select single node , select sandbox, provide name for db, click deploy.
+click on newly creatd db and add database user using 'users' tab
+copy url of db and paste it in mongoose.connect function and change dbuser and dbpassword fields in url
