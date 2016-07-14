@@ -1,0 +1,21 @@
+{
+  "name": "Ecommerce",
+  "version": "0.0.0",
+  "description": "This is an ecommerce website",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devlovepreet/Ecommerce.git"
+  },
+  "author": "Lovepreet Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devlovepreet/Ecommerce/issues"
+  },
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

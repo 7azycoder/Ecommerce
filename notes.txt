@@ -1,0 +1,52 @@
+//Functionalities
+Adding Products
+Search
+Cart
+Authentication signin/signup and Facebook Login
+Payment
+
+//Technologies
+nodejs
+expressjs
+ejs
+mongodb
+elastic search
+jquery
+stripe (for payments)
+
+//Tools to download
+Nodejs LTS
+atom
+create account at mongolab.com
+git
+github
+
+//http methods
+get
+post
+put
+delete
+
+//installation
+sudo apt-get install nodejs
+sudo apt-get install npm
+after doing this create a symlink using following command
+ln -s /usr/bin/nodejs /usr/bin/node
+sudo npm install nodemon -g
+npm init  // provide details there
+
+
+write your server.js connection code like this:
+var express = require('express');
+var app = express(); // object of express
+
+app.listen(3000,function(err){
+  if(err) throw err;
+  console.log("Server is Running");
+});
+
+install express now through terminal
+npm install express --save
+on doing this package.json gets modified automatically and node_modules folder appears in site folder automatically
+now run server through following command
+nodemon server
