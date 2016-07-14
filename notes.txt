@@ -23,9 +23,16 @@ github
 
 //http methods
 get
+app.get('/',function(req,res){
+  var name = "Lovepreet";
+  res.json("My name is " + name);
+});
 post
+app.post()
 put
+app.put()
 delete
+app.delete()
 
 //installation
 sudo apt-get install nodejs
@@ -50,3 +57,9 @@ npm install express --save
 on doing this package.json gets modified automatically and node_modules folder appears in site folder automatically
 now run server through following command
 nodemon server
+
+create homepage using app.get method
+
+add 'morgan' logging request library in server.js
+after it install morgan from terminal using command
+npm install morgan --save
