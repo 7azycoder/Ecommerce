@@ -75,3 +75,11 @@ got to server.js file and import mongoose library there and connect to database 
 now go to site mongolab.com and login to your account. Click on 'create new' button ,select amazon web services, select single node , select sandbox, provide name for db, click deploy.
 click on newly creatd db and add database user using 'users' tab
 copy url of db and paste it in mongoose.connect function and change dbuser and dbpassword fields in url
+now start the server again using command : nodemon server
+
+import 'body-parser' to server.js and also install it from terminal using command
+npm install body-parser --save
+
+write few body-parser functions
+write a post function in server.js to handle post request for user creation
+then install postman in chrome and create a request

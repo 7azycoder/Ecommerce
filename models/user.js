@@ -6,8 +6,8 @@ var UserSchema = new Schema({
   email:{type:String ,unique:true,lowercase:true},
   password: String,
   profile: {
-    name: {type:String,default:''},
-    picture{type:String,default:''}
+    name:{type:String,default:''},
+    picture:{type:String,default:''}
   },
   address:String,
   history:[{
