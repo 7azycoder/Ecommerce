@@ -93,3 +93,7 @@ create a new folder 'main' inside 'views' and move home.ejs and about.ejs into i
 after changing location of home.ejs and about.ejs make changes to their rendering functions in 'server.ejs'
 
 create new folder 'partials' inside 'views' and create two files named 'navbar.ejs' and 'footer.ejs'. Write some content to these files and then go to 'boilerplate.ejs' and include theme using 'include' commannd of ejs
+remove all content form 'boilerplate ejs' and paste some source code of page from bootstrap website. Delete extra links from page as we will include separate files for them in our website.
+create new folder named 'public' inside 'Ecommerce' folder.This folder will contain our static files such as css and js.
+Create a new folder 'css' inside 'public' and paste 'bootstrap.min.css' inside it
+Now we need to tell express about this folder. We go to server.js and at top of all middleware we add some code for it.

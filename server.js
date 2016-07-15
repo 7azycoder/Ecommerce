@@ -20,6 +20,7 @@ mongoose.connect('mongodb://lovepreet:lovepreet@ds041561.mlab.com:41561/ecommerc
 });
 
 //Middleware
+app.use(express.static(__dirname+'/public'));
 app.use(morgan('dev')); //object of morgan
 app.use(bodyParser.json()); // now our express application can parse json data also
 app.use(bodyParser.urlencoded({extended:true}));// now our express application can parse x-www-form-urlencoded data also
