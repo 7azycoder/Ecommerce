@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');  // it connects nodejs and mongodb
 var bcrypt = require('bcrypt-nodejs'); // it is library that hashes passwords etc
+var crypto = require('crypto'); // no need to install this library it is built-in nodejs
 var Schema = mongoose.Schema;
 // The user schema attributes / characteristics / fields
 var UserSchema = new Schema({
@@ -40,6 +41,13 @@ UserSchema.pre('save',function(next){
 UserSchema.methods.comparePassword = function(password){
   //here function parameter 'password' is the passowrd that user types in
   return bcrypt.compareSync(password,this.password);
+}
+
+UserSchema.methods.gravatar = function(size){
+  if(!this.size) size=200;
+  if(!this.email) return 'https://gravatar.com/avatar/?s='+size+'&d=retro';
+  var md5 = crypto.createHash('md5').update(this.email).digest('hex');
+  return 'https://gravatar.com/avatar/'+md5+'?s='+size+'&d=retro';
 }
 
 //this is done so that other files like server.js etc can use this schema

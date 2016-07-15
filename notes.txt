@@ -135,3 +135,8 @@ create new file login.ejs and profile.ejs into views->accounts folder
 make some changes to navbar styling
 make user data accessible on all pages by writing a middleware in server.js
 create logout route in user.js
+
+make changes to signup rote in user.js
+declare a custom function in UserSchema in user.js in models folder to include gravatar functionality to display unique profile pictures
+call gravatar function in signup route to set profile picture of user on signup
+import crypto library in user.js file in models folder

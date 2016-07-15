@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Jumbotron Template for Bootstrap</title>
+    <title>Ecommerce</title>
     <!--<link rel="stylesheet" href="/css/bootstrap.min.css">-->
     <!-- since our application know all the static files are in /public folder we do not need to specify public in the above link of stylesheet-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -10,15 +10,11 @@
 
   <body>
     <% include ./partials/navbar %>
-    <div class="container">
 
       <%- body -%>
 
-    </div>
-
     <% include ./partials/footer %>
 
-    <script src="/js/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <% include ./partials/javascriptOnly %>
   </body>
 </html>
