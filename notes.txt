@@ -131,4 +131,7 @@ there will be some error check if you have this in server.js correctly or not : 
 1. add import user database into passport.js
 2. set middleware for passport in server.js
 
-create new file login.ejs and profile.ejs into views->accounts folder 
+create new file login.ejs and profile.ejs into views->accounts folder
+make some changes to navbar styling
+make user data accessible on all pages by writing a middleware in server.js
+create logout route in user.js
