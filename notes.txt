@@ -152,3 +152,6 @@ import async and faker libraries into api.js with some other imports also.
 install async and faker through terminal also
 write code into api.js to generate some fake data
 go to server.js and import these routes
+open main.js and create a route there for product category
+create a new file category.ejs inside main folder
+added routes for accessing products using categories and single product page in main.js
