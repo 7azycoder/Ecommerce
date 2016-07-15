@@ -113,3 +113,22 @@ create a new file 'custom.css' inside 'css' folder of public
 Now to display flash messages on signup page we import a libray names 'express-flash' along with two more libraries 'express-session' and 'cookie-parser' into 'server.js'
 Now we have to teach our express application of how to use these libraries , so we write middleware functions for it in middleware.
 next modify user.js to display these flash messages . In user.js remember to modify get request also. There we have to pass an argument to specify that we want to show flash messages on requested page
+
+create a new folder 'config' in the project folder and create two files 'secret.js' and 'passport.js'
+inside 'secret.js' write db detials etc and replace those details in server.js after importing the secret file there.
+
+//login part starts here
+
+first install 'connect-mongo' library from terminal and import it in server.js
+we will be using passport library for authentication
+import this library into server.js and passport.js
+also install another library passport-local and import it in passport.js
+add login authentication code into 'passport.js'
+add some code to 'user.js' to declare a route for login
+import passport library and passport config file into user.js
+there will be some error check if you have this in server.js correctly or not : var MongoStore = require('connect-mongo/es5')(session);
+// some errors encountered
+1. add import user database into passport.js
+2. set middleware for passport in server.js
+
+create new file login.ejs and profile.ejs into views->accounts folder 

@@ -9,13 +9,18 @@ var engine = require('ejs-mate');
 var session = require('express-session');
 var cookieParser = require('cookie-parser');
 var flash = require('express-flash');
+//MongoStore is specifically to store session on server side
+var MongoStore = require('connect-mongo/es5')(session);
+var passport = require('passport');
 
+//importing secret file from config folder
+var secret = require('./config/secret');
 //importing user file from models folder
 var User = require('./models/user');
 
 var app = express(); // object of express
 //dbuser:dbpassword
-mongoose.connect('mongodb://lovepreet:lovepreet@ds041561.mlab.com:41561/ecommerce',function(err){
+mongoose.connect(secret.database,function(err){
   if(err){
     console.log(err);
   }else{
@@ -32,9 +37,13 @@ app.use(cookieParser());
 app.use(session({
   resave:true,
   saveUninitialized:true,
-  secret:"lovepreet@#!%"
+  secret:secret.secretKey,
+  store:new MongoStore({url:secret.database,autoReconnect:true})
 }));
 app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.engine('ejs',engine);
 app.set('view engine','ejs'); // setting ejs as engine for our webpages
 
@@ -49,7 +58,7 @@ app.use(userRoutes);
 //this function is for starting the server
 //3000 is the port no
 //listen will work fine even without function(err)
-app.listen(3000,function(err){
+app.listen(secret.port,function(err){
   if(err) throw err;
-  console.log("Server is Running on port 3000");
+  console.log("Server is Running on port "+secret.port);
 });
