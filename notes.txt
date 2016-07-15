@@ -140,3 +140,8 @@ make changes to signup rote in user.js
 declare a custom function in UserSchema in user.js in models folder to include gravatar functionality to display unique profile pictures
 call gravatar function in signup route to set profile picture of user on signup
 import crypto library in user.js file in models folder
+
+define schema for products and category
+added new file admin.js in routes folder
+make a new folder admin inside views folder and create a new file add-category.ejs inside it.
+add newly created admin route to server.js

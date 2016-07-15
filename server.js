@@ -54,8 +54,10 @@ app.set('view engine','ejs'); // setting ejs as engine for our webpages
 
 var mainRoutes = require('./routes/main');
 var userRoutes = require('./routes/user');
+var adminRoutes = require('./routes/admin');
 app.use(mainRoutes);
 app.use(userRoutes);
+app.use(adminRoutes);
 
 //we can also write app.use('/batman',mainRoutes) but them the links would become 'batman/' and 'batman/about'
 
