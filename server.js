@@ -17,6 +17,7 @@ var passport = require('passport');
 var secret = require('./config/secret');
 //importing user file from models folder
 var User = require('./models/user');
+var Category = require('./models/category');
 
 var app = express(); // object of express
 //dbuser:dbpassword
@@ -49,15 +50,28 @@ app.use(function(req,res,next){
   next();
 });
 
+// with the below function category data becomes accessible on all pages
+app.use(function(req,res,next){
+  //find all categories
+  Category.find({},function(err,categories){
+    if(err) return next(err);
+    res.locals.categories = categories;
+    next();
+  });
+});
+
+
 app.engine('ejs',engine);
 app.set('view engine','ejs'); // setting ejs as engine for our webpages
 
 var mainRoutes = require('./routes/main');
 var userRoutes = require('./routes/user');
 var adminRoutes = require('./routes/admin');
+var apiRoutes = require('./api/api');
 app.use(mainRoutes);
 app.use(userRoutes);
 app.use(adminRoutes);
+app.use('/api',apiRoutes);
 
 //we can also write app.use('/batman',mainRoutes) but them the links would become 'batman/' and 'batman/about'
 

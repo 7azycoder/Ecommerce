@@ -145,3 +145,10 @@ define schema for products and category
 added new file admin.js in routes folder
 make a new folder admin inside views folder and create a new file add-category.ejs inside it.
 add newly created admin route to server.js
+import CategorySchema into server.js and define middleware for it
+
+add a new folder 'api' in project folder and create a new file 'api.js' inside it.
+import async and faker libraries into api.js with some other imports also.
+install async and faker through terminal also
+write code into api.js to generate some fake data
+go to server.js and import these routes

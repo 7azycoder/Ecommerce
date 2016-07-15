@@ -16,6 +16,7 @@
     "url": "https://github.com/devlovepreet/Ecommerce/issues"
   },
   "dependencies": {
+    "async": "^2.0.0",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.15.2",
     "connect-mongo": "^1.2.1",
@@ -25,6 +26,7 @@
     "express": "^4.14.0",
     "express-flash": "0.0.2",
     "express-session": "^1.14.0",
+    "faker": "^3.1.0",
     "mongoose": "^4.5.4",
     "morgan": "^1.7.0",
     "passport": "^0.3.2",
