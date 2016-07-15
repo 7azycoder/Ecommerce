@@ -88,3 +88,8 @@ next we have to install ejs and ejs-mate from terminal and import them in server
 ejs is a superpower for html. It is a library to render web pages. ejs-mate is an extension of ejs.
 next write middleware functions for ejs and then create a new folder 'views' and inside it create a new file 'home.ejs'
 write some html content with headings and paragraph tags in 'home.js' and add code to 'server.js' to render it
+create new file 'boillerplate.ejs' . This basically is used to include on all pages just like header and footer of website.Declare 'body' command of ejs in this file and later include it in other main files like 'home.ejs' and 'about.ejs' using 'layout' command.
+create a new folder 'main' inside 'views' and move home.ejs and about.ejs into it. 'main' folder will contain main pages of our website.
+after changing location of home.ejs and about.ejs make changes to their rendering functions in 'server.ejs'
+
+create new folder 'partials' inside 'views' and create two files named 'navbar.ejs' and 'footer.ejs'. Write some content to these files and then go to 'boilerplate.ejs' and include theme using 'include' commannd of ejs
