@@ -97,3 +97,19 @@ remove all content form 'boilerplate ejs' and paste some source code of page fro
 create new folder named 'public' inside 'Ecommerce' folder.This folder will contain our static files such as css and js.
 Create a new folder 'css' inside 'public' and paste 'bootstrap.min.css' inside it
 Now we need to tell express about this folder. We go to server.js and at top of all middleware we add some code for it.
+now include bootstrap file in boilerplate file using some code
+
+next we create a folder named 'routes'. Inside it we create two files 'main.js' and 'user.js'.
+'main.js' will have routes of home,product,cart,search routes etc while 'user.js' will handle routes of user like login,profile, signup ,logout etc
+next cut code of home and about rendering from 'server.js' and paste it inside 'main.js'. Import a router and change code accordingly and at last export that router from that page i.e. 'main.js'
+next cut code of user creation from server.js and paste it inside 'user.js' inside routes folder
+delete existing code from 'user.js' and write some validation code and later include this route inside server.js file
+
+create a new folder 'accounts' inside 'views' and create a new file 'signup.ejs' inside it and add some form code to it. Later add it to user.js file using router
+create a new file 'layout.ejs' just like 'boilerplate.ejs' inside views folder and include this layout inside 'signup.ejs' using 'layout' command
+cut navbar and footer sections from layout.ejs file and paste it in navbar.ejs and footer.ejs and include the files as partials in 'layout.ejs' using 'include' command. Write 'body' command also between container
+create a new file 'custom.css' inside 'css' folder of public
+
+Now to display flash messages on signup page we import a libray names 'express-flash' along with two more libraries 'express-session' and 'cookie-parser' into 'server.js'
+Now we have to teach our express application of how to use these libraries , so we write middleware functions for it in middleware.
+next modify user.js to display these flash messages . In user.js remember to modify get request also. There we have to pass an argument to specify that we want to show flash messages on requested page
