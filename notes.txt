@@ -83,3 +83,8 @@ npm install body-parser --save
 write few body-parser functions
 write a post function in server.js to handle post request for user creation
 then install postman in chrome and create a request
+
+next we have to install ejs and ejs-mate from terminal and import them in server.js
+ejs is a superpower for html. It is a library to render web pages. ejs-mate is an extension of ejs.
+next write middleware functions for ejs and then create a new folder 'views' and inside it create a new file 'home.ejs'
+write some html content with headings and paragraph tags in 'home.js' and add code to 'server.js' to render it

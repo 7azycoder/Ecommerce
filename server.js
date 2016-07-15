@@ -4,7 +4,8 @@ var mongoose = require('mongoose');
 //body-parser will take request from user or you and parses it to the form that is required by the server such as get or post
 //body-parser cannot handle multi-part data like image or video uploads
 var bodyParser = require('body-parser');
-
+var ejs = require('ejs');
+var engine = require('ejs-mate');
 //importing user file from models folder
 var User = require('./models/user');
 
@@ -22,6 +23,8 @@ mongoose.connect('mongodb://lovepreet:lovepreet@ds041561.mlab.com:41561/ecommerc
 app.use(morgan('dev')); //object of morgan
 app.use(bodyParser.json()); // now our express application can parse json data also
 app.use(bodyParser.urlencoded({extended:true}));// now our express application can parse x-www-form-urlencoded data also
+app.engine('ejs',engine);
+app.set('view engine','ejs'); // setting ejs as engine for our webpages
 
 app.post('/create-user',function(req,res,next){
   var user = new User(); //create instance of 'User' object
@@ -34,6 +37,10 @@ app.post('/create-user',function(req,res,next){
     if(err) return next(err);
     res.json('Succssfully created a new user');
   });
+});
+
+app.get('/',function(req,res){
+  res.render('home');
 });
 
 //this function is for starting the server
