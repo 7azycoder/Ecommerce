@@ -182,3 +182,9 @@ create a route for cart in main.js
 added some code into custom.js and product.ejs for cart purposes
 create a route for cart in main.js
 create a new file 'cart.ejs' in main folder
+
+add stripe to main.js
+install stripe using npm
+make account on stripe site
+for stripe testing type'stripe payment testing' in google
+declare spinner ,stripe payment etc in custom.js
