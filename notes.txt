@@ -167,3 +167,7 @@ in package.json add
 create routes for search in main.js and create a new file under views->main folder as 'search-result.ejs'
 create a new page 'product-main.ejs'
 modify route '/' in main.js
+implement pagination in main.js and product-main.ejs
+
+create a new api in api.js under api folder for instant search
+add new file custom.js in js folder and include it in javascriptOnly.js file also and write jquery ajax code for instant search in it
