@@ -171,3 +171,14 @@ implement pagination in main.js and product-main.ejs
 
 create a new api in api.js under api folder for instant search
 add new file custom.js in js folder and include it in javascriptOnly.js file also and write jquery ajax code for instant search in it
+
+
+add new schema cart.js into models foldermodify signup route in user.js
+create a new folder 'middlewares' in project folder and inside it create a file names 'middewares.js'
+include this midlewares in server.js
+modify navbar.ejs to show the cart
+create a route for cart in main.js
+
+added some code into custom.js and product.ejs for cart purposes
+create a route for cart in main.js
+create a new file 'cart.ejs' in main folder

@@ -19,6 +19,8 @@ var secret = require('./config/secret');
 var User = require('./models/user');
 var Category = require('./models/category');
 
+var cartLength = require('./middlewares/middlewares');
+
 var app = express(); // object of express
 //dbuser:dbpassword
 mongoose.connect(secret.database,function(err){
@@ -49,6 +51,8 @@ app.use(function(req,res,next){
   res.locals.user = req.user;
   next();
 });
+
+app.use(cartLength);
 
 // with the below function category data becomes accessible on all pages
 app.use(function(req,res,next){
