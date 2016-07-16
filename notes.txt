@@ -165,3 +165,5 @@ npm install mongoosastic@3.6.0
 in package.json add
 "mongoosastic": "3.6.0"
 create routes for search in main.js and create a new file under views->main folder as 'search-result.ejs'
+create a new page 'product-main.ejs'
+modify route '/' in main.js
