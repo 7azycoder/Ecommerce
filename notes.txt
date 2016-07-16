@@ -155,3 +155,13 @@ go to server.js and import these routes
 open main.js and create a route there for product category
 create a new file category.ejs inside main folder
 added routes for accessing products using categories and single product page in main.js
+
+install elastic search on ubuntu
+add mongoosastic library into product.js
+create mapping between elastic search and mongodb in main.js
+
+i faced some error with mongoosastic version. Install version 3.6.0 for this project as higher versions of mongoosastic demand higher versions of nodejs
+npm install mongoosastic@3.6.0
+in package.json add
+"mongoosastic": "3.6.0"
+create routes for search in main.js and create a new file under views->main folder as 'search-result.ejs'
